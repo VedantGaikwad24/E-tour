@@ -23,7 +23,6 @@ public class CostMaster {
 
     private double childWithoutBed;
 
-    
 
     @ManyToOne
     @JoinColumn(name = "package_id")

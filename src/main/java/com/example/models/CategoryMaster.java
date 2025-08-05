@@ -1,7 +1,10 @@
-
 package com.example.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+
+import java.util.List;
 
 @Entity
 @Table(name = "categorymaster")
@@ -76,4 +79,7 @@ public class CategoryMaster {
     public void setFlag(Boolean flag) {
         this.flag = flag;
     }
+   
+    
+    
 }

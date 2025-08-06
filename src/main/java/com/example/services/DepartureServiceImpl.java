@@ -1,8 +1,9 @@
 package com.example.services;
 
+import com.example.dto.DepartureDatesDTO;
+import com.example.dto.NoOfDaysDTO;
 import com.example.models.Departure;
 import com.example.repositories.DepartureRepository;
-import com.example.services.DepartureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,4 +35,16 @@ public class DepartureServiceImpl implements DepartureService {
     public void deleteDeparture(int id) {
         departureRepository.deleteById(id);
     }
+
+	@Override
+	public List<DepartureDatesDTO> getAllDepartureDates() {
+		// TODO Auto-generated method stub
+		return departureRepository.findAllDepartureDates();	}
+
+	@Override
+	public List<NoOfDaysDTO> getAllNoOfDays() {
+		// TODO Auto-generated method stub
+		return departureRepository.findAllNoOfDays();
+
+	}
 }

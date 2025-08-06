@@ -29,4 +29,54 @@ public class Departure {
     @OneToMany(mappedBy = "departure")
     @JsonIgnore
     private List<BookingHeader> bookings;
+
+	public int getDepartureId() {
+		return departureId;
+	}
+
+	public void setDepartureId(int departureId) {
+		this.departureId = departureId;
+	}
+
+	public LocalDate getDepartDate() {
+		return departDate;
+	}
+
+	public void setDepartDate(LocalDate departDate) {
+		this.departDate = departDate;
+	}
+
+	public LocalDate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
+	}
+
+	public Integer getNoOfDays() {
+		return noOfDays;
+	}
+
+	public void setNoOfDays(Integer noOfDays) {
+		this.noOfDays = noOfDays;
+	}
+
+	public PackageMaster getPackageMaster() {
+		return packageMaster;
+	}
+
+	public void setPackageMaster(PackageMaster packageMaster) {
+		this.packageMaster = packageMaster;
+	}
+
+	public List<BookingHeader> getBookings() {
+		return bookings;
+	}
+
+	public void setBookings(List<BookingHeader> bookings) {
+		this.bookings = bookings;
+	}
+    
+    
 }

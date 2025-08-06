@@ -27,4 +27,66 @@ public class CostMaster {
     @ManyToOne
     @JoinColumn(name = "package_id")
     private PackageMaster packageMaster;
+
+
+	public int getCostId() {
+		return costId;
+	}
+
+
+	public void setCostId(int costId) {
+		this.costId = costId;
+	}
+
+
+	public double getSinglePersonCost() {
+		return singlePersonCost;
+	}
+
+
+	public void setSinglePersonCost(double singlePersonCost) {
+		this.singlePersonCost = singlePersonCost;
+	}
+
+
+	public double getExtraPersonCost() {
+		return extraPersonCost;
+	}
+
+
+	public void setExtraPersonCost(double extraPersonCost) {
+		this.extraPersonCost = extraPersonCost;
+	}
+
+
+	public double getChildWithBed() {
+		return childWithBed;
+	}
+
+
+	public void setChildWithBed(double childWithBed) {
+		this.childWithBed = childWithBed;
+	}
+
+
+	public double getChildWithoutBed() {
+		return childWithoutBed;
+	}
+
+
+	public void setChildWithoutBed(double childWithoutBed) {
+		this.childWithoutBed = childWithoutBed;
+	}
+
+
+	public PackageMaster getPackageMaster() {
+		return packageMaster;
+	}
+
+
+	public void setPackageMaster(PackageMaster packageMaster) {
+		this.packageMaster = packageMaster;
+	}
+    
+    
 }

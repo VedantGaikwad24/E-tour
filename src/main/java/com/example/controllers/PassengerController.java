@@ -32,14 +32,14 @@ public class PassengerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Passenger> getPassengerById(@PathVariable int id) {
+    public ResponseEntity<Passenger> getPassengerById(@PathVariable("id") int id) {
         return passengerService.getPassengerById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePassenger(@PathVariable int id) {
+    public ResponseEntity<Void> deletePassenger(@PathVariable("id") int id) {
         passengerService.deletePassenger(id);
         return ResponseEntity.noContent().build();
     }

@@ -1,3 +1,4 @@
+
 package com.example.controllers;
 
 import com.example.models.Passenger;
@@ -44,3 +45,4 @@ public class PassengerController {
         return ResponseEntity.noContent().build();
     }
 }
+

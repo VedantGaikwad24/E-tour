@@ -1,3 +1,4 @@
+
 package com.example.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -78,5 +79,4 @@ public class Departure {
 		this.bookings = bookings;
 	}
     
-    
-}
+ 

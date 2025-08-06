@@ -1,21 +1,25 @@
-<<<<<<< HEAD
+
 package com.example.repositories;
 
+import com.example.dto.DepartureDatesDTO;
+import com.example.dto.NoOfDaysDTO;
 import com.example.models.Departure;
+
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DepartureRepository extends JpaRepository<Departure, Integer> {
-}
-=======
-package com.example.repositories;
+	
+	@Query("select new com.example.dto.DepartureDatesDTO(d.departDate, d.endDate) from Departure d")
+	List<DepartureDatesDTO> findAllDepartureDates();
 
-import com.example.models.Departure;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+	@Query("select new com.example.dto.NoOfDaysDTO(d.noOfDays) from Departure d")
+	List<NoOfDaysDTO> findAllNoOfDays();
 
-@Repository
-public interface DepartureRepository extends JpaRepository<Departure, Integer> {
+
+
 }
->>>>>>> 48697232c3c3a8a21e62f23700a5e4ed9eb3ad59

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.models;
 
 import jakarta.persistence.*;
@@ -61,3 +62,37 @@ public class Authentication {
         this.customer = customer;
     }
 }
+=======
+package com.example.models;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import lombok.*;
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.util.List;
+@Entity
+@Table(name = "authentication")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Authentication {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int authId;
+
+    @Column(nullable = false, unique = true, length = 80)
+    private String username;  // typically the email or user ID
+
+    @Column(nullable = false)
+    private String password;
+
+   
+    @Column(nullable = false)
+    private boolean enabled = true;  
+
+    @OneToOne
+    @JoinColumn(name = "cust_id", referencedColumnName = "custId")
+    private Customer customer;
+}
+>>>>>>> 48697232c3c3a8a21e62f23700a5e4ed9eb3ad59

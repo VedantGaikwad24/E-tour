@@ -68,6 +68,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-api</artifactId>
@@ -86,6 +87,8 @@
     <scope>runtime</scope>
 </dependency>
 
+=======
+>>>>>>> 48697232c3c3a8a21e62f23700a5e4ed9eb3ad59
 		
 		<!-- For Jakarta EE 10+ (Spring Boot 3+) -->
 <dependency>
